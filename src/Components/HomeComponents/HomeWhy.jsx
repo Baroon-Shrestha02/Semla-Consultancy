@@ -174,7 +174,7 @@ export default function HomeWhy() {
   const rightReasons = reasons.filter((reason) => reason.position === "right");
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 relative overflow-hidden">
+    <section className="py-24  relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400 rounded-full blur-3xl" />

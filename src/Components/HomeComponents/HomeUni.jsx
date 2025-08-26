@@ -1,49 +1,47 @@
 import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { img } from "motion/react-client";
 
 const universities = [
   {
     id: 1,
     name: "University of Tokyo",
-    image: "https://images.unsplash.com/photo-...tokyo-university-photo", // replace with actual Unsplash image URL
+    img: "Uni/uni1.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 2,
     name: "Kyoto University",
-    image: "https://images.unsplash.com/photo-...kyoto-university-photo", // Unsplash URL
+    img: "Uni/uni2.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 3,
     name: "Waseda University",
-    image:
-      "https://images.unsplash.com/photos/a-person-taking-a-picture-of-a-large-building-OD-eX4O879w", // Keio but works as proxy
+    img: "Uni/uni3.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 4,
     name: "Keio University",
-    image:
-      "https://images.unsplash.com/photos/a-person-taking-a-picture-of-a-large-building-OD-eX4O879w", // Keio UI image
+    img: "Uni/uni4.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 5,
     name: "Nagoya University",
-    image:
-      "https://images.unsplash.com/photos/a-building-with-a-sign-in-front-l72hX52sWqc", // Nagoya University
+    img: "Uni/uni5.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 6,
     name: "Tohoku University",
-    image: "https://images.unsplash.com/photo-...tohoku-university-photo", // please replace with real image
+    img: "Uni/uni6.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 7,
     name: "Kyushu University",
-    image: "https://images.unsplash.com/photo-...kyushu-university-photo", // placeholder
+    img: "Uni/uni7.jpeg", // replace with actual Unsplash image URL
   },
   {
     id: 8,
     name: "Sophia University",
-    image: "https://images.unsplash.com/photo-...sophia-university-photo", // placeholder
+    img: "Uni/uni8.jpeg", // replace with actual Unsplash image URL
   },
 ];
 
@@ -73,7 +71,7 @@ export default function HomeUni() {
         {/* Header */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-48 -translate-y-48"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-48 translate-y-48"></div>
+          {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-48 translate-y-48"></div> */}
         </div>
         <div className="mb-8">
           <div className="capitalize max-w-5xl font-extrabold text-xl md:text-7xl text-white">
@@ -108,7 +106,7 @@ export default function HomeUni() {
                   {/* Image Container */}
                   <div className="relative h-64 overflow-hidden rounded-2xl">
                     <img
-                      src={university.image}
+                      src={university.img}
                       alt={university.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />

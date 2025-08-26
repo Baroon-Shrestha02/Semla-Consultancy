@@ -1,5 +1,17 @@
 import React from "react";
+import HeroSection from "../HelperComponents/HeroSection";
 
 export default function AboutHero() {
-  return <div>AboutHero</div>;
+  return (
+    <HeroSection
+      title="About Smela Educational Consultancy"
+      description="Helping students achieve their dream of studying in Japan with expert guidance and end-to-end support."
+      backgroundType="image"
+      backgroundSrc="Uni/uni1.jpeg"
+      height="70vh"
+      overlay="gradient"
+      textAlignment="bottom-left"
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
+    />
+  );
 }

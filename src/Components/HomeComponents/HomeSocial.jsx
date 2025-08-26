@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, Twitter, Youtube } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function HomeSocial() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,8 +26,8 @@ export default function HomeSocial() {
   const socialIcons = [
     { icon: Facebook, color: "text-blue-600" },
     { icon: Instagram, color: "text-pink-600" },
-    { icon: Twitter, color: "text-blue-400" },
-    { icon: Youtube, color: "text-red-600" },
+    { icon: BsWhatsapp, color: "text-green-400" },
+    { icon: Mail, color: "text-red-400" },
   ];
 
   // Sample images for the grid - you can replace these with actual image URLs
@@ -71,12 +72,12 @@ export default function HomeSocial() {
       <div
         className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none"
         style={{
-          backgroundImage: "url('Main/logo2.png')",
+          backgroundImage: "url('Main/logo3.png')",
         }}
       ></div>
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary transform -translate-x-32 -translate-y-32 rotate-45"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary transform translate-x-48 translate-y-48 rotate-12 opacity-80"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary transform translate-x-48 translate-y-48 rotate-12 opacity-80 overflow-hidden"></div>
       <div className="absolute top-1/4 right-10 w-0 h-0 border-l-20 border-r-20 border-b-40 border-l-transparent border-r-transparent border-b-secondary transform rotate-45"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -221,11 +222,6 @@ export default function HomeSocial() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Additional decorative arrow */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10">
-        <div className="w-0 h-0 border-l-32 border-r-32 border-b-64 border-l-transparent border-r-transparent border-b-red-500"></div>
       </div>
     </div>
   );

@@ -174,10 +174,9 @@ const HomeServices = () => {
             initial={{ width: 0 }}
             animate={isHeaderInView ? { width: 120 } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="h-1 bg-primary mb-4 rounded-full"
+            className="h-1 bg-primary mb-2 rounded-full"
           />
 
-          {/* Main Title */}
           <motion.h2
             initial={{ opacity: 0, x: -30 }}
             animate={
@@ -188,12 +187,12 @@ const HomeServices = () => {
           >
             Key Services{" "}
             <span className="relative">
-              designed for you
+              for you
               <motion.div
                 initial={{ width: 0 }}
                 animate={isHeaderInView ? { width: "100%" } : { width: 0 }}
                 transition={{ duration: 1, delay: 0.8 }}
-                className="absolute mt-4 left-0 h-1 bg-primary rounded-full"
+                className="absolute mt-2 left-0 h-1 bg-primary rounded-full"
               />
             </span>
           </motion.h2>
@@ -233,7 +232,7 @@ const HomeServices = () => {
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary text-white font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="bg-primary text-secondary font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Get Started Today
           </motion.button>

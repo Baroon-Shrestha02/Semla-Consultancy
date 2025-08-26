@@ -8,17 +8,19 @@ import HomeTestimonials from "../Components/HomeComponents/HomeTestimonials";
 import HomeVideo from "../Components/HomeComponents/HomeVideo";
 import HomeUni from "../Components/HomeComponents/HomeUni";
 import HomeSocial from "../Components/HomeComponents/HomeSocial";
+import HomeWhy2 from "../Components/HomeComponents/HomeWhy2";
 
 export default function Homepage() {
   return (
     <>
       <HomeVideo />
-      <HomeUni />
-      <HomeHero />
+      {/* <HomeHero /> */}
       <HomeIntro />
       <HomeServices />
       <HomeWhy />
+      {/* <HomeWhy2 /> */}
 
+      <HomeUni />
       <HomeTestimonials />
       <HomeSocial />
       <HomeContact />

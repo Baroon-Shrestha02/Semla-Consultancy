@@ -63,8 +63,6 @@ export default function HomeVideo() {
                           ))}
                         </div>
                       </div>
-
-                      {/* Subtitle */}
                       <div
                         className={`transform transition-all duration-1000 ease-out ${
                           isLoaded
@@ -92,12 +90,12 @@ export default function HomeVideo() {
                     style={{ transitionDelay: "1800ms" }}
                   >
                     <div className="relative cursor-pointer">
-                      <div className="bg-gradient-to-br from-primary to-primary/80 rounded-full px-8 py-2 lg:px-12 lg:py-4 text-center shadow-2xl border-4 border-white/20">
+                      {/* <div className="bg-gradient-to-br from-primary to-primary/80 rounded-full px-8 py-2 lg:px-12 lg:py-4 text-center shadow-2xl border-4 border-white/20">
                         <div className="text-white font-bold text-xl lg:text-2xl mb-2">
                           Order Now
                         </div>
                         <div className="w-12 h-0.5 bg-white/60 mx-auto"></div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Star, Heart, ChevronUp, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HomeTestimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -120,6 +121,15 @@ export default function HomeTestimonials() {
       ref={sectionRef}
       className="min-h-screen bg-gray-50 py-16 px-6 relative overflow-hidden"
     >
+      <div className="flex items-center justify-center flex-col gap-4 my-6">
+        <div className="font-extrabold text-2xl md:text-5xl ">
+          Hear From Our Students
+        </div>
+        <div className="max-w-3xl font-extralight text-lg md:text-2xl text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+          error ipsam hic ab, id placeat dolore autem earum eos sequi?
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Image and Header */}
@@ -136,21 +146,12 @@ export default function HomeTestimonials() {
                 alt="Nature landscape"
                 className="w-full h-[600px] object-cover"
               />
-
-              {/* Overlay Text */}
-              <div className="absolute top-6 left-6 bg-white rounded-2xl px-6 py-4 shadow-lg max-w-sm">
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight">
-                  Hear From Our Satisfied Clients Have To Say
-                  <Heart className="inline-block w-6 h-6 text-red-500 ml-2" />
-                </h2>
-              </div>
-
               {/* Stats Badge */}
               <div className="absolute bottom-6 right-6 bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl px-8 py-6 shadow-lg">
                 <div className="text-5xl lg:text-6xl font-bold text-gray-800">
-                  10.9K+
+                  1000+
                 </div>
-                <div className="text-sm text-gray-600 mt-1">Happy Clients</div>
+                <div className="text-sm text-gray-600 mt-1">Happy Students</div>
               </div>
             </div>
           </div>
@@ -208,15 +209,6 @@ export default function HomeTestimonials() {
                     <div>
                       <div className="font-semibold text-lg">
                         {testimonial.author}
-                      </div>
-                      <div
-                        className={`text-sm ${
-                          testimonial.isActive
-                            ? "text-green-100"
-                            : "text-gray-500"
-                        }`}
-                      >
-                        {testimonial.position}
                       </div>
                     </div>
                   </div>

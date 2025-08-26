@@ -1,29 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-// Mock Link component for demonstration (replace with your actual Link)
-const Link = ({ to, children, ...props }) => (
-  <a href={to} {...props}>
-    {children}
-  </a>
-);
+import { Link } from "react-router-dom"; // Import Link
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleSidebar = () => setIsOpen(!isOpen);
 
   // Handle scroll behavior for background change
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,52 +19,28 @@ export default function Navbar() {
   const sidebarVariants = {
     closed: {
       x: "100%",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
+      transition: { type: "spring", stiffness: 400, damping: 40 },
     },
     open: {
       x: "0%",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
+      transition: { type: "spring", stiffness: 400, damping: 40 },
     },
   };
 
   const curveVariants = {
     closed: {
       d: "M 600 0 Q 600 300 600 600 Q 600 900 600 1200",
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-      },
+      transition: { duration: 0.8, ease: "easeInOut" },
     },
     open: {
       d: "M 600 0 Q 400 300 600 600 Q 400 900 600 1200",
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-      },
+      transition: { duration: 0.8, ease: "easeInOut" },
     },
   };
 
   const linkVariants = {
-    closed: {
-      opacity: 0,
-      x: 50,
-    },
-    open: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
+    closed: { opacity: 0, x: 50 },
+    open: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
   const containerVariants = {
@@ -101,6 +65,8 @@ export default function Navbar() {
     { to: "/about", label: "About Us" },
     { to: "/services", label: "Services" },
     { to: "/gallery", label: "Gallery" },
+    { to: "/faq", label: "FAQ's" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -113,43 +79,28 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        {/* Content */}
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-">
           <div className="flex items-center justify-between">
             <Link to="/">
               <div
-                className={`font-bold text-2xl transition-colors duration-300 ${
+                className={`font-bold text-2xl transition-colors duration-300 my- ${
                   isScrolled
                     ? "text-gray-800 hover:text-blue-600"
-                    : "text-white hover:text-blue-200 drop-shadow-lg"
+                    : "text-white hover:text-blue-200 drop-shadow-lg bg-white h-18 rounded-b-2xl"
                 }`}
               >
-                <img src="Main/logo3.png" className="w-40" />
-                {/* Logo */}
+                <img src="Main/logo3.png" className="w-40" alt="Logo" />
               </div>
             </Link>
 
             <div className="flex items-center gap-x-6">
-              {/* Contact Link (always visible) */}
-              <Link to="/contact">
-                <div
-                  className={`font-medium transition-colors duration-300 ${
-                    isScrolled
-                      ? "text-gray-700 hover:text-blue-600"
-                      : "text-white hover:text-blue-200 drop-shadow-md"
-                  }`}
-                >
-                  Contact
-                </div>
-              </Link>
-
               {/* Hamburger Menu Button */}
               <motion.button
                 onClick={toggleSidebar}
                 className={`p-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
                   isScrolled
-                    ? "text-gray-700 hover:bg-gray-100 border border-gray-200/50"
-                    : "text-white hover:bg-white/20 border border-white/30 drop-shadow-md"
+                    ? "text-gray-700"
+                    : "text-white hover:bg-white/20  drop-shadow-md"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -160,6 +111,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
       {/* Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -173,6 +125,7 @@ export default function Navbar() {
           />
         )}
       </AnimatePresence>
+
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
@@ -229,14 +182,14 @@ export default function Navbar() {
                     <Link
                       to={link.to}
                       onClick={toggleSidebar}
-                      className="block text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors duration-200 group"
+                      className="block text-2xl font-semibold text-gray-800 hover:text-secondary transition-colors duration-200 group"
                     >
                       <motion.div
                         className="flex items-center space-x-2"
                         whileHover={{ x: 10 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <span className="w-6 h-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                        <span className="w-6 h-1 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         <span>{link.label}</span>
                       </motion.div>
                     </Link>
