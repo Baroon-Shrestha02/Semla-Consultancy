@@ -3,7 +3,9 @@ import React, { useState, useEffect, useRef } from "react";
 export default function HomeVideo() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
+  const modalVideoRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -22,12 +24,40 @@ export default function HomeVideo() {
     };
   }, []);
 
+  // Handle modal open/close
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "unset"; // Restore scrolling
+    // Pause the modal video when closing
+    if (modalVideoRef.current) {
+      modalVideoRef.current.pause();
+      modalVideoRef.current.currentTime = 0;
+    }
+  };
+
+  // Close modal on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isModalOpen) {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isModalOpen]);
+
   const titleWords = "Welcome to SEMLA".split(" ");
 
   return (
     <>
       <div className="min-h-[100vh] overflow-hidden relative">
-        <div className="relative  h-full">
+        <div className="relative h-full">
           <div className="relative h-screen">
             {/* Hero Video with Parallax */}
             <div
@@ -165,15 +195,29 @@ export default function HomeVideo() {
                     style={{ transitionDelay: "1800ms" }}
                   >
                     <div className="flex flex-col gap-4 hidden md:block">
-                      <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+                      <button className="group relative px-8 py-4 bg-primary text-secondary hover:text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
                         <span className="relative z-10">
                           Start Your Journey
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary  opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                       </button>
 
-                      <button className="px-6 py-3 border-2 border-white/30 text-white font-medium rounded-full backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300">
+                      <button
+                        onClick={openModal}
+                        className="group  mt-4 px-6 py-3 border-2 border-white/30 text-white font-medium rounded-full backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center gap-2 justify-center"
+                      >
+                        <svg
+                          className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
                         Watch Our Story
                       </button>
                     </div>
@@ -242,6 +286,61 @@ export default function HomeVideo() {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-w-4xl mx-4 w-full bg-black rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-300 scale-100"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            {/* Video Container */}
+            <div className="relative aspect-video">
+              <video
+                ref={modalVideoRef}
+                controls
+                autoPlay
+                className="w-full h-full"
+              >
+                <source src="Home/OurStory.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            {/* Optional: Video Title/Description */}
+            <div className="p-6 bg-gradient-to-r from-gray-900 to-black">
+              <h3 className="text-2xl font-bold text-white mb-2">Our Story</h3>
+              <p className="text-gray-300">
+                Discover how SEMLA has been transforming dreams into reality,
+                helping students achieve their international education goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <style jsx>{`
         @keyframes float {
