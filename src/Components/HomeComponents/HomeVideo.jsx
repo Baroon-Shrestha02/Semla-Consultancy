@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomeVideo() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -195,13 +196,15 @@ export default function HomeVideo() {
                     style={{ transitionDelay: "1800ms" }}
                   >
                     <div className="flex flex-col gap-4 hidden md:block">
-                      <button className="group relative px-8 py-4 bg-primary text-secondary hover:text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
-                        <span className="relative z-10">
-                          Start Your Journey
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary  opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                      </button>
+                      <Link to="/contact">
+                        <button className="group relative px-8 py-4 bg-primary text-secondary hover:text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+                          <span className="relative z-10">
+                            Start Your Journey
+                          </span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary  opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <div className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        </button>
+                      </Link>
 
                       <button
                         onClick={openModal}
@@ -325,7 +328,7 @@ export default function HomeVideo() {
                 autoPlay
                 className="w-full h-full"
               >
-                <source src="Home/OurStory.mp4" type="video/mp4" />
+                <source src="Home/Hero.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
