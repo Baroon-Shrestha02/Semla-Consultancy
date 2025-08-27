@@ -79,7 +79,7 @@ ${formData.message}
 Sent from Semla Educational Consultancy website`;
 
     // WhatsApp number (replace with your actual WhatsApp number)
-    const whatsappNumber = "977XXXXXXXXX"; // Replace with your WhatsApp number
+    const whatsappNumber = "9779813960567"; // Replace with your WhatsApp number
 
     // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -113,13 +113,13 @@ Sent from Semla Educational Consultancy website`;
     {
       icon: Phone,
       title: "Call Us",
-      content: "+977 XX-XXXXXXX",
+      content: "+977 9813960567",
       color: "text-blue-600",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      content: "+977 XX-XXXXXXX",
+      content: "+977 9813960567",
       color: "text-green-600",
     },
     {
@@ -131,7 +131,7 @@ Sent from Semla Educational Consultancy website`;
     {
       icon: MapPin,
       title: "Address",
-      content: "Kathmandu, Nepal",
+      content: "Chabahil, Kathmandu, Nepal",
       color: "text-red-600",
     },
   ];

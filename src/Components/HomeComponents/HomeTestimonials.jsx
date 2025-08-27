@@ -123,11 +123,15 @@ export default function HomeTestimonials() {
     >
       <div className="flex items-center justify-center flex-col gap-4 my-6">
         <div className="font-extrabold text-2xl md:text-5xl ">
-          Hear From Our Students
+          Hear From Our
+          <span className="bg-primary text-secondary px-6 py-2 inline-block -rotate-2 rounded-full">
+            Students
+          </span>
         </div>
         <div className="max-w-3xl font-extralight text-lg md:text-2xl text-center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
-          error ipsam hic ab, id placeat dolore autem earum eos sequi?
+          Discover what our students have to say about their learning
+          experience, from mastering Japanese language skills to achieving study
+          abroad success with our guidance.
         </div>
       </div>
       <div className="max-w-7xl mx-auto">
@@ -142,9 +146,9 @@ export default function HomeTestimonials() {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=700&fit=crop"
+                src="Home/stories.jpg"
                 alt="Nature landscape"
-                className="w-full h-[600px] object-cover"
+                className="w-full h-[400px] md:h-[600px] object-cover"
               />
               {/* Stats Badge */}
               <div className="absolute bottom-6 right-6 bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl px-8 py-6 shadow-lg">

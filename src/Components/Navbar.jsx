@@ -134,7 +134,7 @@ export default function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed top-0 right-0 w-80 md:w-[35%] h-screen bg-white shadow-2xl z-50 overflow-hidden"
+            className="fixed top-0 right-0 w-70 md:w-[35%] h-screen bg-white shadow-2xl z-50 overflow-hidden"
           >
             {/* Curved SVG Background */}
             <div className="absolute inset-0 overflow-hidden">

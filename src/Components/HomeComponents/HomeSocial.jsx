@@ -92,7 +92,10 @@ export default function HomeSocial() {
               }`}
             >
               <h2 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                Follow us on <span className="text-primary">Socials</span>
+                Follow us on
+                <span className="bg-primary text-secondary px-6  inline-block -rotate-4 rounded-full">
+                  Socials
+                </span>
               </h2>
             </div>
 

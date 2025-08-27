@@ -11,6 +11,7 @@ import {
   User,
   MessageSquare,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HomeContact() {
   const [formData, setFormData] = useState({
@@ -37,25 +38,25 @@ export default function HomeContact() {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "+977-1-234-5678",
+      primary: "+977 9813960567",
       description: "Mon-Fri 9AM-6PM",
-      action: "tel:+97712345678",
+      action: "tel:+9779813960567",
       color: "bg-blue-100 text-blue-600",
     },
     {
       icon: Mail,
       title: "Email Us",
-      primary: "info@semla.com",
+      primary: "info@semlaconsultancy.com",
       description: "We'll respond within 24 hours",
-      action: "mailto:info@semla.com",
+      action: "mailto:info@semlaconsultancy.com",
       color: "bg-green-100 text-green-600",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      primary: "+977-98-765-4321",
+      primary: "+977 9813960567",
       description: "Available 24/7",
-      action: "https://wa.me/9779876654321",
+      action: "https://wa.me/9779813960567",
       color: "bg-emerald-100 text-emerald-600",
     },
   ];
@@ -66,7 +67,7 @@ export default function HomeContact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle grid pattern */}
@@ -80,11 +81,14 @@ export default function HomeContact() {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 py-16">
         {/* Header Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Get in <span className="text-secondary">Touch</span>
+            Get in
+            <span className="bg-primary text-secondary px-6 py-1 inline-block -rotate-4 rounded-full">
+              Touch
+            </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Ready to start your study abroad journey? We're here to help you
@@ -95,7 +99,7 @@ export default function HomeContact() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 ">
             {/* Visit Us Section */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <div className="flex items-center justify-between mb-6">
@@ -105,7 +109,7 @@ export default function HomeContact() {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://maps.google.com?q=Kathmandu,Nepal",
+                      "https://maps.app.goo.gl/1uZTVTUAaHpR8d689",
                       "_blank"
                     )
                   }
@@ -123,9 +127,7 @@ export default function HomeContact() {
                     SEMLA Education Consultancy
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    BagBazar, Kathmandu
-                    <br />
-                    Near NMB bank
+                    Chabahil, Kathmandu
                   </p>
                 </div>
               </div>
@@ -199,9 +201,8 @@ export default function HomeContact() {
           <div className="lg:sticky lg:top-8">
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               <div className="h-[600px] relative">
-                {/* Interactive Map Embed */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2615877735204!2d85.30814631501657!3d27.715331882790434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a74aa1f23%3A0x74ebef82ad0e5c15!2sThamel%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.096058794945!2d85.3492534!3d27.7165448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb197d9d23f7ed%3A0x2724281b4393865d!2sChabahil%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1756288594793!5m2!1sen!2snp"
                   width="100%"
                   height="600"
                   style={{ border: 0 }}
@@ -239,9 +240,11 @@ export default function HomeContact() {
                 Schedule a consultation with our education experts. Free initial
                 consultation available.
               </p>
-              <button className="w-full bg-secondary text-white py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
-                Schedule Consultation
-              </button>
+              <Link to="/contact">
+                <button className="w-full bg-secondary text-white py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
+                  Schedule Consultation
+                </button>
+              </Link>
             </div>
           </div>
         </div>

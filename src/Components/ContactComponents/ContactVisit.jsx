@@ -10,11 +10,11 @@ export default function ContactVisit() {
     { day: "Saturday", time: "Closed" },
   ];
 
-  const address = "Bag Bazar, Kathmandu, Nepal";
+  const address = "Chabahil, Kathmandu, Nepal";
 
   const handleGetDirections = () => {
     const googleMapsUrl =
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3812174932104!2d85.31685772568832!3d27.705513676183532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19075849239d%3A0x4ddaddd1271c3890!2sBagbazar%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1756193297616!5m2!1sen!2snp";
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.096058794945!2d85.3492534!3d27.7165448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb197d9d23f7ed%3A0x2724281b4393865d!2sChabahil%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1756288594793!5m2!1sen!2snp";
     window.open(googleMapsUrl, "_blank");
   };
 
@@ -93,8 +93,7 @@ export default function ContactVisit() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-1">Phone</h5>
-                  <p className="text-gray-600">+977 XX-XXXXXXX</p>
-                  <p className="text-gray-600">+977 XX-XXXXXXX</p>
+                  <p className="text-gray-600">+977 9813960567</p>
                 </div>
               </motion.div>
 
@@ -153,7 +152,7 @@ export default function ContactVisit() {
                 onMouseLeave={() => setIsMapInteractive(false)}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3812174932104!2d85.31685772568832!3d27.705513676183532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19075849239d%3A0x4ddaddd1271c3890!2sBagbazar%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1756193297616!5m2!1sen!2snp"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.096058794945!2d85.3492534!3d27.7165448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb197d9d23f7ed%3A0x2724281b4393865d!2sChabahil%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1756288594793!5m2!1sen!2snp"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

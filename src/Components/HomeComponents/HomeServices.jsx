@@ -8,6 +8,7 @@ import {
   Plane,
   Home,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -229,13 +230,15 @@ const HomeServices = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-primary text-secondary font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Get Started Today
-          </motion.button>
+          <Link to="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-primary text-secondary font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Get Started Today
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

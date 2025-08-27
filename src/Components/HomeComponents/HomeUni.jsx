@@ -75,9 +75,15 @@ export default function HomeUni() {
         </div>
         <div className="mb-8">
           <div className="capitalize max-w-5xl font-extrabold text-xl md:text-7xl text-white">
-            Discover <span className="text-primary">Top universities</span>{" "}
+            Discover{" "}
+            <span className="bg-primary text-secondary px-6 py-1 rounded-full rotate-4 inline-block">
+              Top Choices
+            </span>{" "}
             <span className="block mt-2">
-              represented by <span className="text-primary">SEMLA</span>
+              represented by
+              <span className="bg-primary text-secondary px-6 py-1 rounded-full -rotate-4 inline-block">
+                SEMLA
+              </span>
             </span>
           </div>
           <p className="mt-4 text-white text-lg">

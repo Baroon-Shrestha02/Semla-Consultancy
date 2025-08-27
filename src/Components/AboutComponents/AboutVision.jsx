@@ -98,14 +98,14 @@ function SectionCard({ section, index }) {
 
   return (
     <div className={`min-h-screen relative overflow-hidden`}>
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 mb-10 md:mb-0">
         <motion.div
           ref={ref}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
           className={`flex items-center min-h-screen ${
-            isTextLeft ? "flex-row" : "flex-row-reverse"
+            isTextLeft ? "flex-row" : "flex-row-reverse text-right"
           } gap-16`}
         >
           {/* Text Content */}
@@ -152,9 +152,7 @@ function SectionCard({ section, index }) {
                       animate={{ x: hoveredHighlight === idx ? 5 : 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ArrowRight
-                        className={`w-5 h-5 ${section.accentColor}`}
-                      />
+                      <ArrowRight className={`w-5 h-5 text-white`} />
                     </motion.div>
                   </motion.div>
                 );
@@ -183,7 +181,7 @@ function SectionCard({ section, index }) {
               <div className="relative h-96 w-full rounded-2xl overflow-hidden bg-secondary shadow-2xl flex items-center justify-center">
                 {/* Replace with your dummy image */}
                 <img
-                  src="Uni/uni1.jpeg" // replace with your image path
+                  src="About/bis.png" // replace with your image path
                   alt="Illustration"
                   className="w-full h-full object-cover rounded-2xl"
                 />

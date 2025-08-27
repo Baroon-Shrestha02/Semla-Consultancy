@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { GraduationCap, Users, Award, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function AboutIntro() {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +78,7 @@ export default function AboutIntro() {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen bg-gray-50 py-12 px-6 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-white to-gray-50 py-12 px-6 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -161,9 +162,11 @@ export default function AboutIntro() {
                   : "-translate-x-10 opacity-0"
               }`}
             >
-              <button className="bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-                Start Your Journey
-              </button>
+              <Link to="/contact">
+                <button className="bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                  Start Your Journey
+                </button>
+              </Link>
             </div>
           </div>
 
