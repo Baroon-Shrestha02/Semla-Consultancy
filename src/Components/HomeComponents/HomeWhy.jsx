@@ -327,7 +327,7 @@ export default function HomeWhy() {
                   }}
                   className="absolute -top-4 -left-8 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-blue-100"
                 >
-                  <div className="text-blue-600 font-bold text-lg">200+</div>
+                  <div className="text-blue-600 font-bold text-lg">10+</div>
                   <div className="text-gray-600 text-xs">Universities</div>
                 </motion.div>
 
@@ -344,9 +344,7 @@ export default function HomeWhy() {
                   }}
                   className="absolute -top-2 -right-6 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-emerald-100"
                 >
-                  <div className="text-emerald-600 font-bold text-lg">
-                    5000+
-                  </div>
+                  <div className="text-emerald-600 font-bold text-lg">500+</div>
                   <div className="text-gray-600 text-xs">Students</div>
                 </motion.div>
 
@@ -363,8 +361,8 @@ export default function HomeWhy() {
                   }}
                   className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-purple-100"
                 >
-                  <div className="text-purple-600 font-bold text-lg">15+</div>
-                  <div className="text-gray-600 text-xs">Years Exp</div>
+                  <div className="text-purple-600 font-bold text-lg">98%</div>
+                  <div className="text-gray-600 text-xs">Success Rate</div>
                 </motion.div>
               </div>
 

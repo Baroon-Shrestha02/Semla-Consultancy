@@ -11,6 +11,7 @@ import {
   Users,
   Target,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const processSteps = [
   {
@@ -251,7 +252,7 @@ export default function WorkProcess() {
           </div>
 
           {/* Sticky Sidebar - Only visible on lg and above */}
-          <div className="hidden lg:block lg:sticky lg:top-0 lg:h-screen lg:flex lg:items-center">
+          <div className="hidden lg:block lg:sticky lg:top-8 lg:h-screen lg:flex lg:items-center">
             <div className="w-full bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <div className="space-y-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -323,10 +324,12 @@ export default function WorkProcess() {
 
         {/* CTA */}
         <div className="text-center mt-24">
-          <button className="group inline-flex items-center gap-3 bg-primary text-secondary px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            <span>Start Your Study Journey</span>
-            <Plane className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          <Link to="/contact">
+            <button className="group inline-flex items-center gap-3 bg-primary text-secondary px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <span>Start Your Study Journey</span>
+              <Plane className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+          </Link>
           <p className="text-gray-600 text-lg mt-4">
             Let us guide you from Nepal to Japan step by step.
           </p>

@@ -153,7 +153,7 @@ export default function HomeTestimonials() {
               {/* Stats Badge */}
               <div className="absolute bottom-6 right-6 bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl px-8 py-6 shadow-lg">
                 <div className="text-5xl lg:text-6xl font-bold text-gray-800">
-                  1000+
+                  500+
                 </div>
                 <div className="text-sm text-gray-600 mt-1">Happy Students</div>
               </div>

@@ -31,9 +31,9 @@ const sections = [
       },
     ],
     stats: [
-      { number: "50+", label: "Partner Universities" },
-      { number: "10,000+", label: "Students Guided" },
-      { number: "95%", label: "Success Rate" },
+      { number: "10+", label: "Partner Universities" },
+      { number: "500+", label: "Students Guided" },
+      { number: "98%", label: "Success Rate" },
     ],
     layout: "text-left",
     bgColor: "bg-blue-50",
@@ -62,7 +62,7 @@ const sections = [
     stats: [
       { number: "24/7", label: "Student Support" },
       { number: "100%", label: "Satisfaction Rate" },
-      { number: "15+", label: "Years Experience" },
+      { number: "5+", label: "Years Experience" },
     ],
     layout: "text-right",
     bgColor: "bg-purple-50",

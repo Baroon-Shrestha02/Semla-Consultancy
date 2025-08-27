@@ -131,11 +131,12 @@ const CoreServices = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Your Gateway to
+            Explore Our
             <span className="bg-primary text-secondary px-6 py-1 inline-block -rotate-4 rounded-full">
-              Japan
+              Core Services
             </span>
           </h1>
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Comprehensive services to make your Japanese study dreams come true.
             From counseling to career placement, we've got you covered.

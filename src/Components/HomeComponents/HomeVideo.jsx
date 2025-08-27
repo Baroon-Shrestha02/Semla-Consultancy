@@ -1,3 +1,4 @@
+import { ArrowDown } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -169,8 +170,8 @@ export default function HomeVideo() {
                         <div className="flex flex-wrap gap-4 mt-8">
                           {[
                             { number: "500+", label: "Students Placed" },
-                            { number: "50+", label: "Partner Universities" },
-                            { number: "15+", label: "Countries" },
+                            { number: "10+", label: "Partner Universities" },
+                            { number: "98%", label: "Success Rate" },
                           ].map((stat, index) => (
                             <div key={index} className="text-center">
                               <div className="text-2xl lg:text-4xl font-bold text-white drop-shadow-lg">
@@ -281,9 +282,7 @@ export default function HomeVideo() {
             >
               <div className="flex flex-col items-center text-white/60 animate-bounce">
                 <span className="text-sm mb-2">Scroll to explore</span>
-                <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-                  <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-                </div>
+                <ArrowDown />
               </div>
             </div>
           </div>
