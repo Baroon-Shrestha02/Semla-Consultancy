@@ -9,11 +9,13 @@ import Footer from "./Components/Footer";
 import FAQ from "./Pages/FAQ";
 import ScrollToTop from "./Components/HelperComponents/ScrollToTop";
 import { Toaster } from "react-hot-toast";
+import LanguageSwitcher from "./Components/HelperComponents/LanguageSwitcher";
 
 function App() {
   return (
     <>
       <Toaster position="top-center" />
+      <LanguageSwitcher />
       <ScrollToTop />
       <Navbar />
       <Routes>

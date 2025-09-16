@@ -130,12 +130,8 @@ export default function HomeVideo() {
                                 transitionDelay: `${index * 200 + 300}ms`,
                               }}
                             >
-                              <h1 className="text-white font-black text-6xl sm:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight drop-shadow-2xl hover:scale-105 transition-transform duration-300 cursor-default">
+                              <h1 className="text-white font-black text-6xl sm:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight drop-shadow-2xl hover:scae-105 transition-transform duration-300 cursor-default">
                                 {word}
-                                {/* Glowing Effect */}
-                                <span className="absolute inset-0 text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text opacity-0 hover:opacity-30 transition-opacity duration-500">
-                                  {word}
-                                </span>
                               </h1>
                             </div>
                           ))}

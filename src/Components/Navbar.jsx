@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom"; // Import Link
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { t } = useTranslation();
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
@@ -61,7 +64,7 @@ export default function Navbar() {
   };
 
   const sidebarLinks = [
-    { to: "/", label: "Home" },
+    { to: "/", label: t("nav.home") },
     { to: "/about", label: "About Us" },
     { to: "/services", label: "Services" },
     { to: "/gallery", label: "Gallery" },
