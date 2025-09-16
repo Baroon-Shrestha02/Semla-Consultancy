@@ -89,15 +89,15 @@ const ServicesCourses = () => {
     },
     {
       id: 5,
-      title: "University Application Support",
-      subtitle: "Complete Admission Assistance",
+      title: "TITP Visa Class",
+      subtitle: "Technical Intern Training Program",
       description:
-        "End-to-end support for university applications, visa processing, and pre-departure preparation.",
+        "Comprehensive guidance for TITP visa applicants, including training, documentation, and orientation for working opportunities in Japan.",
       features: [
-        "Document preparation",
-        "Visa assistance",
-        "University selection",
-        "Interview preparation",
+        "Language & skill training",
+        "Visa documentation support",
+        "Job placement assistance",
+        "Pre-departure orientation",
       ],
       duration: "6-12 months",
       icon: CheckCircle,

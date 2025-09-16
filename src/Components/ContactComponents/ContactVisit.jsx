@@ -30,7 +30,7 @@ export default function ContactVisit() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Header */}
         <motion.div

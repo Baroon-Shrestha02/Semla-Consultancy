@@ -1,5 +1,10 @@
 {
   "nav": {
-    "home": "Home"
+    "home": "Home",
+    "about": "About Us",
+    "service": "Our Services",
+    "gallery": "Gallery",
+    "faq": "FAQ's",
+    "contact": "Contact"
   }
 }

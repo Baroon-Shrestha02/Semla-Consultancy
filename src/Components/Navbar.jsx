@@ -65,11 +65,11 @@ export default function Navbar() {
 
   const sidebarLinks = [
     { to: "/", label: t("nav.home") },
-    { to: "/about", label: "About Us" },
-    { to: "/services", label: "Services" },
-    { to: "/gallery", label: "Gallery" },
-    { to: "/faq", label: "FAQ's" },
-    { to: "/contact", label: "Contact" },
+    { to: "/about", label: t("nav.about") },
+    { to: "/services", label: t("nav.service") },
+    { to: "/gallery", label: t("nav.gallery") },
+    { to: "/faq", label: t("nav.faq") },
+    { to: "/contact", label: t("nav.contact") },
   ];
 
   return (

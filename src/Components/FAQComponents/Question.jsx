@@ -272,7 +272,7 @@ export default function Question() {
                         className="overflow-hidden border-t border-gray-100"
                       >
                         <div className="p-6 pl-20">
-                          <p className="text-gray-700 leading-relaxed mb-4">
+                          <p className="text-gray-700 leading-relaxed mb-4 text-justify">
                             {faq.answer}
                           </p>
                         </div>

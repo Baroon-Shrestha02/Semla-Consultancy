@@ -1,5 +1,10 @@
 {
   "nav": {
-    "home": "Homeeeeee"
+    "home": "家",
+    "about": "私たちについて",
+    "service": "当社のサービス",
+    "gallery": "ギャラリー",
+    "faq": "よくある質問",
+    "contact": "接触"
   }
 }

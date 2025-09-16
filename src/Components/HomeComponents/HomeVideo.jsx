@@ -88,26 +88,6 @@ export default function HomeVideo() {
               <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
             </div>
 
-            {/* Animated Particles */}
-            <div className="absolute inset-0">
-              {[...Array(6)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`absolute w-2 h-2 bg-white/20 rounded-full transform transition-all duration-3000 ${
-                    isLoaded ? "opacity-100" : "opacity-0"
-                  }`}
-                  style={{
-                    left: `${20 + i * 15}%`,
-                    top: `${30 + i * 8}%`,
-                    animationDelay: `${i * 0.5}s`,
-                    animation: isLoaded
-                      ? `float ${3 + i * 0.5}s ease-in-out infinite alternate`
-                      : "none",
-                  }}
-                />
-              ))}
-            </div>
-
             {/* Content Container */}
             <div className="absolute bottom-0 left-0 right-0 pb-8 px-4">
               <div className="container mx-auto">

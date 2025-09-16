@@ -27,17 +27,20 @@ export default function AboutIntro() {
     {
       icon: GraduationCap,
       title: "Expert Guidance",
-      description: "Professional counseling for your academic journey",
+      description:
+        "Comprehensive support in Japanese language, test preparation, SSW & TITP visa classes, along with further career guidance",
     },
     {
       icon: Globe,
-      title: "Wide College Network",
-      description: "Connecting students with top universities throughout Japan",
+      title: "Visa & Career Pathways",
+      description:
+        "Guidance for SSW and TITP visa processes with career opportunities in Japan",
     },
     {
       icon: Users,
-      title: "Personalized Support",
-      description: "One-on-one assistance throughout the process",
+      title: "Dedicated Assistance",
+      description:
+        "Personalized mentoring and support tailored to each student and professional",
     },
     {
       icon: Award,

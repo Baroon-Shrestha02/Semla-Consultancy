@@ -12,10 +12,10 @@ import {
 const services = [
   {
     id: 1,
-    title: "JLPT Classes",
+    title: "Japanese Language Class",
     subtitle: "Japan Focused",
     description:
-      "Comprehensive Japanese Language Proficiency Test preparation with expert instructors",
+      "Comprehensive Japanese language learning with expert instructors",
     icon: Globe,
     color: "blue",
     delay: 0.1,
@@ -32,20 +32,20 @@ const services = [
   },
   {
     id: 3,
-    title: "Registration",
+    title: "SSW Visa Class",
     subtitle: "Inquiry & Support",
     description:
-      "Get personalized consultation and register for classes that fit your schedule",
+      "Get personalized consultation and guidance for your SSW visa application",
     icon: Users,
     color: "emerald",
     delay: 0.3,
   },
   {
     id: 4,
-    title: "Class Schedule",
+    title: "TITP Visa Class",
     subtitle: "Flexible Timing",
     description:
-      "Book classes from 7 AM to 4 PM with flexible scheduling options according to you choice.",
+      "Get assistance and guidance for TITP visa process with flexible consultation options",
     icon: Calendar,
     color: "purple",
     delay: 0.4,
@@ -254,42 +254,42 @@ export default function LearningCenterSection() {
 
                 <div className="space-y-6 text-white leading-relaxed">
                   <p className="text-lg">
-                    You might wonder how we provide international-level classes
-                    at such an affordable price. Our mission is simple — to make
-                    quality education accessible so ambitious students can
-                    benefit from our well-structured programs.
+                    We aim to make international-level education accessible to
+                    everyone. Our programs are designed to help ambitious
+                    students achieve their goals without breaking the bank.
                   </p>
 
                   <p>
                     <strong className="text-white">
-                      We specialize in Japan-oriented education,
-                    </strong>{" "}
-                    focusing mainly on JLPT (Japanese Language Proficiency Test)
-                    preparation and other international certifications. Our
-                    instructors include native speakers and experienced teachers
-                    who deeply understand the exam process.
+                      Our main focus is Japan-oriented education
+                    </strong>
+                    , including Japanese Language Classes (JLPT preparation),
+                    Test Preparation, and visa-related courses like SSW and
+                    TITP. Our instructors are experienced professionals who
+                    guide you through every step of the process.
                   </p>
 
                   <p>
-                    Many institutions claim to have expert instructors, but few
-                    actually deliver.{" "}
+                    Many institutions promise results, but few deliver.{" "}
                     <strong className="text-white">
                       Our mock tests and preparation programs
                     </strong>{" "}
-                    provide real exam-like experiences, detailed analysis, and
-                    personalized feedback to ensure measurable results.
+                    give real exam-like experiences, detailed analysis, and
+                    personalized feedback, ensuring measurable improvement and
+                    confidence.
                   </p>
 
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border-l-4 border-primary my-8">
                     <p className="text-gray-700 mb-3">
                       <strong>
-                        Meet our experts on weekdays at 10:00 AM to 3:00 PM
+                        Meet our experts on weekdays from 10:00 AM to 3:00 PM
                       </strong>{" "}
-                      - get a consultation before you start classes with us.
+                      - get personalized consultation before enrolling in any
+                      class.
                     </p>
                     <p className="text-gray-600">
-                      <strong>Flexible schedules:</strong> Take classes
-                      accordingly, from 7 AM till 4 PM.
+                      <strong>Flexible schedules:</strong> Choose classes
+                      between 7 AM and 4 PM according to your convenience.
                     </p>
                   </div>
                 </div>

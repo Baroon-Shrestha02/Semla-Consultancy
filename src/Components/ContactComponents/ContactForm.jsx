@@ -138,7 +138,7 @@ Sent from Semla Educational Consultancy website`;
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-white to-blue-50">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Section Header */}
         <motion.div
